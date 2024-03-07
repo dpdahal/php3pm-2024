@@ -8,4 +8,13 @@ CREATE TABLE IF NOT EXISTS users(
     gender ENUM("male","female"),
     role SET("admin","user") DEFAULT "user",
     image varchar(100)
-    )
+    );
+
+CREATE TABLE category(
+                         created_by int,
+                         FOREIGN KEY (created_by) REFERENCES users(id),
+                         cid int PRIMARY KEY AUTO_INCREMENT,
+                         name varchar(255) UNIQUE,
+                         slug varchar(255) UNIQUE
+
+);

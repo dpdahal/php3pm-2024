@@ -2,6 +2,16 @@
 require_once "../config/helper.php";
 require_once "../connection/database.php";
 
+$sql = "SELECT * FROM users WHERE email='admin@gmail.com'";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) == 0) {
+    $password = md5('admin002');
+    $insert = "INSERT INTO users (name, email, password,gender,role) 
+    VALUES ('admin','admin@gmail.com','$password','male','admin')";
+    mysqli_query($conn, $insert);
+}
+
+
 $errors = [
     'email' => '',
     'password' => ''

@@ -28,9 +28,9 @@ a{
 .header {
     width: 100%;
     background: #dbdfe3;
-    grid-column-start: 1;
-    grid-column-end: 12;
     position: fixed;
+    height: 70px;
+    z-index: 300;
 }
 
 .top-container {
@@ -79,7 +79,7 @@ a{
 }
 
 .aside {
-    width: 20%;
+    width: 250px;
     height: 100%;
     background: #0c8bb9;
     grid-column-start: 1;
@@ -113,14 +113,13 @@ a{
 }
 
 .main {
-    width: 94%;
+    width: 82%;
     min-height: 900px;
-    grid-column-start: 3;
-    grid-column-end: 12;
-    margin: 90px 0 0 60px;
     background: white;
     border-radius: 20px;
-
+    position: absolute;
+    left: 260px;
+    top: 90px;
 }
 
 .profile {

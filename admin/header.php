@@ -41,7 +41,7 @@
                     <li><a href="<?= admin_url('show-users') ?>">Show Profile</a></li>
                 <?php } ?>
 
-                <li><a href="">Manage Category</a></li>
+                <li><a href="<?= admin_url('manage-category') ?>">Manage Category</a></li>
                 <li><a href="">Add News</a></li>
                 <li><a href="">Show News</a></li>
             </ul>
