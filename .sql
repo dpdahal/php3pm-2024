@@ -18,3 +18,25 @@ CREATE TABLE category(
                          slug varchar(255) UNIQUE
 
 );
+
+
+CREATE TABLE news(
+                     nid int PRIMARY KEY AUTO_INCREMENT,
+                     created_by int,
+                     category_id int,
+                     FOREIGN KEY (created_by) REFERENCES users(id),
+                     FOREIGN KEY (category_id) REFERENCES category(cid),
+                     title varchar(255),
+                     slug varchar(255) UNIQUE,
+                     image varchar(100),
+                     summary text,
+                     description text,
+                     status ENUM("public","draft") DEFAULT "draft",
+                     created_at date,
+                     updated_at date,
+                     meta_title text,
+                     meta_description text,
+                     page_views int
+
+);
+

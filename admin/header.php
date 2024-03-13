@@ -42,7 +42,7 @@
                 <?php } ?>
 
                 <li><a href="<?= admin_url('manage-category') ?>">Manage Category</a></li>
-                <li><a href="">Add News</a></li>
+                <li><a href="<?= admin_url('add-news') ?>">Add News</a></li>
                 <li><a href="">Show News</a></li>
             </ul>
         </div>

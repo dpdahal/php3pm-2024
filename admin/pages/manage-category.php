@@ -71,6 +71,7 @@ if (isset($_POST['add_category'])) {
         }
 
     }else{
+        unset($_POST['cid']);
         foreach ($_POST as $key => $value) {
             if (empty($value)) {
                 $errors[$key] = "This field is required";
@@ -138,6 +139,7 @@ if (isset($_POST['update_category'])) {
     $old['cid'] = $cat['cid'];
     $old['btn_name'] = 'Update Category';
 }
+
 
 ?>
 
